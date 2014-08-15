@@ -18,8 +18,7 @@ libraryDependencies ++= {
     "ch.qos.logback"             %   "logback-core"             % "1.1.2",
     "ch.qos.logback"             %   "logback-classic"          % "1.1.2",
     "com.ansvia.graph"          % "blueprints-scala_2.10"       % "0.1.17",
-    "com.thinkaurelius.titan"   % "titan-all"                   % "0.4.4",
-    "commons-net"               % "commons-net"                 % "3.2"
+    "com.tinkerpop.blueprints" % "blueprints-core" % "2.4.0"
   )
 }
 

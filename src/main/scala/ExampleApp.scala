@@ -1,16 +1,11 @@
 package example
 
-import com.thinkaurelius.titan.core.{TitanLabel, TitanKey, TitanFactory}
-import org.apache.commons.configuration.BaseConfiguration
+import com.tinkerpop.blueprints.impls.tg.TinkerGraphFactory
 import com.ansvia.graph.BlueprintsWrapper._
 import scala.collection.JavaConversions._
 
 object ConsumerApp extends App {
-  val conf = new BaseConfiguration()
-  conf.setProperty("storage.backend", "cassandra")
-  conf.setProperty("storage.hostname", "127.0.0.1")
-  conf.setProperty("storage.keyspace","TestTitanKeySpace2")
-  implicit val db = TitanFactory.open(conf)
+  implicit val db = TinkerGraphFactory.createTinkerGraph()
 
   case class Person(name:String, kind:String)
 
